@@ -29,11 +29,6 @@ function editToDo(event) {
         toDos[index].text = span.innerText;
         saveToDos();
     });
-
-    function isSame(element) {
-        return element.id === Number(li.id);
-    }
-
 }
 
 function deleteToDo(event) {
