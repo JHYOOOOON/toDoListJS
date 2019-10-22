@@ -1,3 +1,33 @@
+html,
+body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Permanent Marker', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #a10202;
+}
+
+h1 {
+    font-size: 50px;
+    color: #a10202;
+}
+
 .greeting,
 .form {
     display: none;
@@ -5,4 +35,23 @@
 
 .showing {
     display: block;
+}
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn .5s linear;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
