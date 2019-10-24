@@ -18,14 +18,83 @@ body {
 }
 
 input {
-    background: transparent;
+    width: 500px;
+    height: 32px;
+    background: rgba(255, 255, 255, .7);
     border: none;
-    border-bottom: 2px solid #a10202;
+    border-bottom: 2px dashed #a10202;
 }
 
-h1 {
-    font-size: 50px;
+input:focus,
+input {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #737373;
+    font-weight: bold;
+    text-align: center;
+}
+
+input::placeholder {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #737373;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+ul>form {
+    margin: 10px;
+}
+
+button {
+    border: none;
+    font-size: 25px;
+}
+
+.editBtn {
+    background-color: #c90a00;
+}
+
+.delBtn {
+    background-color: #3d008c;
+}
+
+.greetings {
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: 3px 3px #a10202;
+}
+
+.date {
+    font-size: 18px;
+}
+
+.clock {
+    margin: 20px;
+    font-size: 30px;
     color: #a10202;
+}
+
+.toDoForm {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    width: 520px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding-left: 5px;
+    background-color: rgba(255, 255, 255, .7);
+    font-size: 30px;
+    color: black;
 }
 
 .greeting,
