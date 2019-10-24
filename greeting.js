@@ -24,7 +24,7 @@ function askForName() {
 function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    const greetingText = ['Hello', 'Glad to meet you!', 'How\'s it going?'];
+    const greetingText = ['Hello!', 'Glad to meet you!', 'How\'s it going?'];
     greeting.innerText = `${greetingText[Math.floor(Math.random() * 3)]} ${text}`;
 }
 
