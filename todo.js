@@ -8,7 +8,8 @@ let toDos = [];
 
 function editToDo(event) {
     const btn = event.target;
-    let li = btn.parentNode;
+    const btnContainer = btn.parentNode;
+    let li = btnContainer.parentNode;
     let span = li.firstChild;
     const form = document.createElement("form");
     const input = document.createElement("input");
@@ -33,7 +34,8 @@ function editToDo(event) {
 
 function deleteToDo(event) {
     const btn = event.target;
-    const li = btn.parentNode;
+    const div = btn.parentNode;
+    const li = div.parentNode;
     toDoList.removeChild(li);
     const cleanToDos = toDos.filter(function(toDo) {
         return toDo.id !== Number(li.id);
@@ -52,16 +54,20 @@ function paintToDo(text) {
     const li = document.createElement("li");
     const editBtn = document.createElement("button");
     const delBtn = document.createElement("button");
-    const span = document.createElement("span");
+    const liText = document.createElement("div");
+    const btnContainer = document.createElement("div");
     const newId = toDos.length + 1;
     editBtn.innerText = "✏️";
     editBtn.addEventListener("click", editToDo);
     delBtn.innerText = "❌";
     delBtn.addEventListener("click", deleteToDo);
-    span.innerText = text;
-    li.appendChild(span);
-    li.appendChild(editBtn);
-    li.appendChild(delBtn);
+    editBtn.className = "editBtn";
+    delBtn.className = "delBtn";
+    liText.innerText = text;
+    btnContainer.appendChild(editBtn);
+    btnContainer.appendChild(delBtn);
+    li.appendChild(liText);
+    li.appendChild(btnContainer);
     li.id = newId;
     toDoList.appendChild(li);
     let toDoObj = {
@@ -76,8 +82,11 @@ function paintToDo(text) {
 function handleSubmit(event) {
     event.preventDefault();
     const currentValue = toDoInput.value;
-    paintToDo(currentValue);
-    toDoInput.value = "";
+    console.log(currentValue);
+    if (currentValue != "") {
+        paintToDo(currentValue);
+        toDoInput.value = "";
+    }
 }
 
 // JSON.parse(): string -> object
