@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
     <div class="js-date date">
         <h2>YYYY-MM-DD</h2>
     </div>
@@ -19,11 +21,11 @@
         <h1>00:00</h1>
     </div>
     <form class="js-form form">
-        <input type="text" placeholder="What is your name?">
+        <input type="text" placeholder="What is your name?" maxlength="20">
     </form>
     <h4 class="js-greetings greetings"></h4>
-    <form class="js-toDoForm">
-        <input type="text" placeholder="Write a to do">
+    <form class="js-toDoForm toDoForm">
+        <input type="text" placeholder="Write a to do" maxlength="16">
     </form>
     <ul class="js-toDoList">
 
@@ -32,6 +34,7 @@
     <script src="greeting.js"></script>
     <script src="todo.js"></script>
     <script src="bg.js"></script>
+
 </body>
 
 </html>
