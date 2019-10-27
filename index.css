@@ -5,7 +5,8 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Liu Jian Mao Cao', 'Nanum Myeongjo', serif;
+    ;
 }
 
 body {
@@ -22,7 +23,7 @@ input {
     height: 32px;
     background: rgba(255, 255, 255, .7);
     border: none;
-    border-bottom: 2px dashed #a10202;
+    border-bottom: 2px dashed #d66c02;
 }
 
 input:focus,
@@ -52,11 +53,13 @@ button {
 }
 
 .editBtn {
-    background-color: #c90a00;
+    background-color: #d66c02;
+    opacity: .5;
 }
 
 .delBtn {
-    background-color: #3d008c;
+    background-color: #5da3b3;
+    opacity: .5;
 }
 
 .greetings {
@@ -90,10 +93,12 @@ ul {
 li {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 10px;
-    padding-left: 5px;
+    padding-left: 10px;
     background-color: rgba(255, 255, 255, .7);
-    font-size: 30px;
+    font-size: 20px;
+    font-weight: bolder;
     color: black;
 }
 
