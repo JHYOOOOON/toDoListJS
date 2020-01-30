@@ -16,7 +16,7 @@ function getTime() {
     const weekday = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 
     dateTitle.innerText =
-        `${year}.${month<10 ? `0${month}` : month}.${date<10 ? `0${date}` : date} ${weekday[day]}`
+        `${year}.${month<10 ? `0${month+1}` : month}.${date<10 ? `0${date}` : date} ${weekday[day]}`
 
     clockTitle.innerText =
         `${hours<10 ? `0${hours}` : hours} : ${minutes<10 ? `0${minutes}` : minutes} : ${seconds<10 ? `0${seconds}` : seconds}`;
